@@ -12,6 +12,7 @@ $obj = json_decode($body, true);
 //echo $obj["type"];
 
 $type = $obj["type"];
+
 if($type == "user"){
 	$email = $obj["email"];
 	//echo $email;
