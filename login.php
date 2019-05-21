@@ -19,6 +19,9 @@ if($row){
    if(strcmp($password, $row["password"]) == 0){    //strcmp -> 0 if equal
    		//make array of results to return
    		$response = array("id"=>$row["id"], "firstname" => $row["firstname"], "email"=>$row["email"], "type"=>$row["type"]);
+   		$id_ac = $row['id'];
+   		$sqlquery = "INSERT INTO activite (user_id, type, date, time, activite_text) VALUES ('$id_ac', 'login', NOW(), NOW(), 'You logged in');";
+		$result = mysql_query($sqlquery) or die(mysql_error());
    		echo json_encode($response);
    }
    else{
