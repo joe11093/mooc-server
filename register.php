@@ -46,6 +46,8 @@ $sqlqueryexists = "SELECT id FROM utilisateur WHERE utilisateur.email = '$email'
  				// insert into student using the last id
 				$sqlquery = "INSERT INTO student (id, annee_scolaire) VALUES ('$inserted_id', $annee_id);";
 				$result = mysql_query($sqlquery) or die(mysql_error());
+				$sqlquery = "INSERT INTO activite (user_id, type, date, time, activite_text) VALUES ('$inserted_id', 'singup', NOW(), NOW(), 'You signed up');";
+				$result = mysql_query($sqlquery) or die(mysql_error());
 				echo "true";
 				}
 
@@ -57,6 +59,4 @@ $sqlqueryexists = "SELECT id FROM utilisateur WHERE utilisateur.email = '$email'
 
 
 		}
-echo "hi";
-
 ?>
