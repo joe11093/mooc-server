@@ -21,7 +21,7 @@ if(isset($obj["annee_id"])){
    		}
    		echo json_encode($arr, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 	}
-		else{
+	else{
 		//no results
 		echo "no_results";
 	}
