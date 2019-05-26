@@ -21,7 +21,7 @@ if($type == "matiere" || $type == "annee_scolaire"){
 		while ($row=mysql_fetch_assoc($result)){
     		array_push($res_array, array_map("utf8_encode", $row));
    		}
-   		print_r($res_array);
+   		//print_r($res_array);
    		echo json_encode($res_array);
 	}
 		else{
